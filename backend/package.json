@@ -1,0 +1,24 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelCheco/store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelCheco/store/issues"
+  },
+  "homepage": "https://github.com/MichaelCheco/store#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.17.0",
+    "prisma-client-lib": "^1.25.1"
+  }
+}
