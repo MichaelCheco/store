@@ -1,25 +1,29 @@
 {
   "name": "store",
   "version": "1.0.0",
-  "description": "",
+  "description": "TBD built with  - NEXT.js / Apollo - GraphQL / Prisma - Grid / styled-components test",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MichaelCheco/store.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MichaelCheco/store/issues"
   },
   "homepage": "https://github.com/MichaelCheco/store#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4"
+  },
   "dependencies": {
-    "graphql-yoga": "^1.17.0",
-    "prisma-client-lib": "^1.25.1"
+    "graphql-yoga": "^1.17.0"
   }
 }
