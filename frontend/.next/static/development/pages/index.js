@@ -59,11 +59,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/pages/index.js";
 
+
+/* eslint-disable react/jsx-filename-extension */
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 3
     },
     __self: this
   }, "Hello");
