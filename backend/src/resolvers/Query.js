@@ -3,9 +3,9 @@ const Query = {
     return ctx.prisma.items();
   },
   item: (parent, { id }, ctx, info) => {
-    return ctx.prisma.item( { id } )
-},
-}
+    return ctx.prisma.item({ id });
+  }
+};
 module.exports = {
-  Query,
+  Query
 };
