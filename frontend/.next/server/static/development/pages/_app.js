@@ -114,6 +114,8 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/Header.js";
 
 
+/* eslint-disable react/jsx-filename-extension */
+
 
 
 
@@ -156,7 +158,72 @@ var Header = function Header(props) {
       lineNumber: 22
     },
     __self: this
-  }, "Home"))));
+  }, "Shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Sell")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "Orders")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Accout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "Sign Out")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "My Cart"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -328,7 +395,7 @@ __webpack_require__.r(__webpack_exports__);
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__Wrapper",
   componentId: "x3z0n-0"
-})(["border:1px solid red;"]);
+})(["border:1px solid black;display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-template-rows:75px;align-items:center;justify-items:center;@media (max-width:500px){grid-template-columns:100%;grid-template-rows:repeat(5,50px);border:1px solid black;a{display:block;border:1px solid black;width:100%;text-align:center;height:50px;text-decoration:none;}}"]);
 /* harmony default export */ __webpack_exports__["default"] = (Wrapper);
 
 /***/ }),

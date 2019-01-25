@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-filename-extension */
 
-import Link from 'next/link'
-import Router from 'next/router'
-import NProgress from 'nprogress'
-import Wrapper from './styles/NavStyles'
+import Link from 'next/link';
+import Router from 'next/router';
+import NProgress from 'nprogress';
+import Wrapper from './styles/NavStyles';
 
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -15,14 +16,17 @@ Router.onRouteChangeError = () => {
 };
 
 
-const Header = (props) => {
-  return (
-    <nav>
-      <Wrapper>
-      <Link href="/"><a>Home</a></Link>
-      </Wrapper>
-    </nav>
-  )
-}
+const Header = props => (
+  <nav>
+    <Wrapper>
+      <Link href="/"><a>Shop</a></Link>
+      <Link href="/"><a>Sell</a></Link>
+      <Link href="/"><a>Orders</a></Link>
+      <Link href="/"><a>Accout</a></Link>
+      <Link href="/"><a>Sign Out</a></Link>
+      <Link href="/"><a>My Cart</a></Link>
+    </Wrapper>
+  </nav>
+);
 
 export default Header;
