@@ -20,7 +20,7 @@ const Header = props => (
   <nav>
     <Wrapper>
       <Link href="/"><a>Shop</a></Link>
-      <Link href="/"><a>Sell</a></Link>
+      <Link href="/sell"><a>Sell</a></Link>
       <Link href="/"><a>Orders</a></Link>
       <Link href="/"><a>Accout</a></Link>
       <Link href="/"><a>Sign Out</a></Link>
