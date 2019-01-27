@@ -5,14 +5,14 @@ const { prisma } = require('./generated/prisma-client');
 const server = new GraphQLServer({
   typeDefs: 'src/schema.graphql',
   resolvers,
-  context: (request) => ({
-      ...request,
-      prisma,
-    }),
+  context: request => ({
+    ...request,
+    prisma,
+  }),
 });
 
 server.start({
   cors: {
-    credentials: true,
+    credentials: 'include',
   },
 }, () => console.log('Server is running on http://localhost:4000'));
