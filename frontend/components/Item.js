@@ -7,7 +7,7 @@ export default class Item extends Component {
     const { item } = this.props
     return (
       <div>
-      {item.image && <img src={item.image} alt={image.title} />}
+      {/* {item.image && <img src={item.image} alt={image.title} />} */}
       <Link
         href={{
           pathname: '/item',

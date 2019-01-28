@@ -6,6 +6,7 @@ import Item from './Item'
 const ITEMS_QUERY = gql`
  query ITEMS_QUERY {
    items {
+     id
      title
      description
      price

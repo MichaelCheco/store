@@ -172,7 +172,7 @@ var Header = function Header(props) {
     },
     __self: this
   }, "Sell")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+    href: "/update",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
