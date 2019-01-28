@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-
+import DeleteItem from './DeleteItem'
 export default class Item extends Component {
   render() {
     const { item } = this.props
@@ -26,7 +26,7 @@ export default class Item extends Component {
             <a>Edit</a>
           </Link>
           <button>add to cart</button>
-          <DeleteItem id={item.id}>Delte</DeleteItem>
+          <DeleteItem id={item.id}>Delete</DeleteItem>
       </div>
     )
   }
