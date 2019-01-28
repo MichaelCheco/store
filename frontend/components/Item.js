@@ -26,7 +26,7 @@ export default class Item extends Component {
             <a>Edit</a>
           </Link>
           <button>add to cart</button>
-          <button>delete</button>
+          <DeleteItem id={item.id}>Delte</DeleteItem>
       </div>
     )
   }

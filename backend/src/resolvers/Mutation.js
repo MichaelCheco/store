@@ -11,6 +11,9 @@ const Mutation = {
         id: args.id
       }
     }, info)
+  },
+  deleteItem: async (parent, args, ctx, info) => {
+    return ctx.db.mutation.deleteItem({where: {id: args.id}}, info)
   }
 };
 
