@@ -1,20 +1,7 @@
 const Mutation = {
-  createItem: async (parent, args, ctx, info) => {
-    return ctx.prisma.createItem({
-      ...args
-    })
-  },
-  updateItem: async (parent, args, ctx, info) => {
-    const updates = { ...args };
-    delete updates.id;
-    const item = await ctx.prisma.updateItem({
-      where: { id: args.id },
-      data: updates,
-    })
-    return item;
-  },
-}
+  createItem: async (parent, args, ctx, info) => ctx.db.mutation.createItem({
+    data: {...args,},
+  }, info),
+};
 
-module.exports = {
-  Mutation
-}
+module.exports = Mutation;

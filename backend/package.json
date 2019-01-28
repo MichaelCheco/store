@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -e js,graphql -x node src/index.js",
+    "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
+    "test": "jest",
+    "deploy": "prisma deploy --env-file variables.env"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,20 @@
   },
   "homepage": "https://github.com/MichaelCheco/store#readme",
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.1.1",
+    "graphql-cli": "^3.0.7",
     "graphql-yoga": "^1.17.0",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.9",
+    "prisma": "^1.25.3",
+    "prisma-binding": "^2.3.0",
     "prisma-client-lib": "^1.25.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }

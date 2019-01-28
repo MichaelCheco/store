@@ -1,11 +1,4 @@
 const Query = {
-  items: (parent, args, ctx, info) => {
-    return ctx.prisma.items();
-  },
-  item: (parent, { id }, ctx, info) => {
-    return ctx.prisma.item({ id });
-  }
+  items: (parent, args, ctx, info) => ctx.db.query.items(),
 };
-module.exports = {
-  Query
-};
+module.exports = Query;

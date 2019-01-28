@@ -1,17 +1,8 @@
-type Query {
-    items: [Item!]!
-    item(id: ID!): Item
-}
-type Mutation {
-   createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
-   updateItem(id: ID!, title: String, description: String, price: Int): Item!
-}
+# import * from './generated/prisma.graphql'
 
-type Item {
-  id: ID! 
-  title: String!
-  description: String!
-  image: String
-  largeImage: String
-  price: Int!
+type Mutation {
+  createItem(title: String, description: String, price: Int, image: String, largeImage: String): Item!
+}
+type Query {
+   items: [Item]!
 }

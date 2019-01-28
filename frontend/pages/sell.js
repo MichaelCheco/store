@@ -1,5 +1,5 @@
-import Items from '../components/Items'
+import CreateItem from '../components/CreateItem'
 
 export default props => (
-  <Items />
+  <CreateItem />
 )

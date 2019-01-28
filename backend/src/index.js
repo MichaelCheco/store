@@ -1,18 +1,17 @@
-const { GraphQLServer } = require('graphql-yoga');
-const { resolvers } = require('./resolvers');
-const { prisma } = require('./generated/prisma-client');
+require('dotenv').config({ path: 'variables.env' });
+const createServer = require('./createServer');
+const db = require('./db');
 
-const server = new GraphQLServer({
-  typeDefs: 'src/schema.graphql',
-  resolvers,
-  context: request => ({
-    ...request,
-    prisma,
-  }),
-});
+const server = createServer();
+
+// TODO use express middleware to handle cookies (JWT)
+// TODO use express middleware to populate current user
 
 server.start({
   cors: {
-    credentials: 'include',
+    credentials: true,
+    origin: process.env.FRONTEND_URL,
   },
-}, () => console.log('Server is running on http://localhost:4000'));
+}, (deets) => {
+  console.log(`server is now running on port http:/localhost:${deets.port}`);
+});
