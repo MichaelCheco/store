@@ -4,9 +4,10 @@ import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import Item from './Item'
 import Pagination from './Pagination';
+import { perPage } from '../config';
  const ITEMS_QUERY = gql`
- query ITEMS_QUERY {
-   items {
+ query ITEMS_QUERY($skip: Int = 0, $first: Int = ${perPage}) {
+   items(skip: $skip, first: $first, orderBy: createdAt_DESC) {
      id
      title
      description
@@ -22,8 +23,11 @@ export default class Items extends Component {
     return (
       <div>
         <Pagination page={this.props.page} />
-      <Query query={ITEMS_QUERY}>
+      <Query query={ITEMS_QUERY} variables={{
+        skip: this.props.page * perPage - perPage,
+      }}>
         {({data, loading, error}) => {
+          console.log(data, 'DATA')
           if (loading) return <h3>Loading</h3>
           if(error) return <ErrorMessage error={error}/>
           return (
