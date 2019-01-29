@@ -3,7 +3,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import Item from './Item'
-const ITEMS_QUERY = gql`
+ const ITEMS_QUERY = gql`
  query ITEMS_QUERY {
    items {
      id
@@ -32,3 +32,4 @@ export default class Items extends Component {
     )
   }
 }
+export { ITEMS_QUERY }

@@ -30,7 +30,7 @@ class createItem extends Component {
     description: '',
     image: '',
     largeImage: '',
-    price: 1000,
+    price: 0,
   }
   handleChange = e => {
     const { type, name, value } = e.target;
@@ -99,7 +99,7 @@ class createItem extends Component {
             <label htmlFor="price">
                 Price
                 <input
-                type="text"
+                type="number"
                 id="price"
                 name="price"
                 placeholder="price"
