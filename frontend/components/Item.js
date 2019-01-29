@@ -5,7 +5,6 @@ import DeleteItem from './DeleteItem'
 export default class Item extends Component {
   render() {
     const { item } = this.props
-    console.log(item)
     return (
       <div>
       {/* {item.image && <img src={item.image} alt={image.title} />} */}
