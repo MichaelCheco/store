@@ -1,5 +1,9 @@
-const Signup = props => (
-  <p>Signup!</p>
+import Signup from '../components/Signup'
+
+const SignUp = props => (
+  <div>
+    <Signup />
+  </div>
 )
 
-export default Signup;
+export default SignUp;
