@@ -21,10 +21,9 @@ const Header = props => (
     <Wrapper>
       <Link href="/shop"><a>Shop</a></Link>
       <Link href="/sell"><a>Sell</a></Link>
+      <Link href="/signup"><a>SignUp</a></Link>
       <Link href="/update"><a>Orders</a></Link>
-      <Link href="/"><a>Accout</a></Link>
       <Link href="/"><a>Sign Out</a></Link>
-      <Link href="/"><a>My Cart</a></Link>
     </Wrapper>
   </nav>
 );
