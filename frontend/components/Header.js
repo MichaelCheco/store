@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import Wrapper from './styles/NavStyles';
-
+import User from './User'
 Router.onRouteChangeStart = () => {
   NProgress.start();
 };
@@ -19,6 +19,14 @@ Router.onRouteChangeError = () => {
 const Header = props => (
   <nav>
     <Wrapper>
+      <User>
+        {({data: { me }}) => {
+          if(me) {
+            return <p>{me.name}</p>
+          }
+          return null;
+        }}
+      </User>
       <Link href="/shop"><a>Shop</a></Link>
       <Link href="/sell"><a>Sell</a></Link>
       <Link href="/signup"><a>SignUp</a></Link>
