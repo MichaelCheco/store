@@ -22,11 +22,13 @@
   "homepage": "https://github.com/MichaelCheco/store#readme",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "graphql": "^14.1.1",
     "graphql-cli": "^3.0.7",
     "graphql-yoga": "^1.17.0",
+    "jsonwebtoken": "^8.4.0",
     "nodemailer": "^5.1.1",
     "nodemon": "^1.18.9",
     "prisma": "^1.25.3",

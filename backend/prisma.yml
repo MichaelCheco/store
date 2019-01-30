@@ -1,6 +1,7 @@
 #endpoint: ${env:PRISMA_ENDPOINT}
-endpoint: https://us1.prisma.sh/michael-a-checo/backend/dev
-datamodel: datamodel.prisma
+endpoint: https://us1.prisma.sh/michael-a-checo/store/dev
+          
+datamodel: datamodel.graphql
 # secret: ${env:PRISMA_SECRET}
 hooks:
   post-deploy:
