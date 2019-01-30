@@ -8,7 +8,7 @@ const theme = {
   black: '#393939',
 
 }
-const styledPage = styled.div`
+const StyledPage = styled.div`
   background: white;
   color: ${props => props.theme.black};
 `
@@ -23,13 +23,13 @@ export default class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}> 
-      <styledPage>
+      <StyledPage>
         <Meta />
         <Header />
         <Inner>
         {this.props.children}
          </Inner>
-      </styledPage>   
+      </StyledPage>   
       </ThemeProvider>
     )
   }

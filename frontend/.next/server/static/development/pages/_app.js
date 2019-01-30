@@ -330,8 +330,8 @@ var theme = {
   maxWidth: '1000px',
   black: '#393939'
 };
-var styledPage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "Page__styledPage",
+var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
+  displayName: "Page__StyledPage",
   componentId: "sc-14vv5uc-0"
 })(["background:white;color:", ";"], function (props) {
   return props.theme.black;
@@ -364,7 +364,7 @@ function (_Component) {
           lineNumber: 25
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("styledPage", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
