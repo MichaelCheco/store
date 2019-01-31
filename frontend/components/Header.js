@@ -21,24 +21,24 @@ const Header = props => (
         {({data: { me }}) => (
     <Wrapper>
       <Link href="/shop">
-      <a>Shop</a>
+      <a>Shop 🛍️</a>
       </Link>
       {me && (
         <>
       <Link href="/sell"><
-        a>Sell</a>
+        a>Sell 🤑</a>
         </Link>
       <Link href="/">
-      <a>Account</a>
+      <a>Account 👽</a>
       </Link>
       <Link href="/update">
-      <a>Orders</a>
+      <a>Orders 📙</a>
       </Link>
       </>
       )}
         {!me && (
           <Link href="/signup">
-      <a>Sign In</a>
+      <a>Sign In 🤷‍♂️</a>
       </Link>
     )}
 </Wrapper>

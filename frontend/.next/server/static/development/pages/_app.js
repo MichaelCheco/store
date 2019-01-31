@@ -162,7 +162,7 @@ var Header = function Header(props) {
         lineNumber: 24
       },
       __self: this
-    }, "Shop")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "Shop \uD83D\uDECD\uFE0F")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/sell",
       __source: {
         fileName: _jsxFileName,
@@ -175,7 +175,7 @@ var Header = function Header(props) {
         lineNumber: 28
       },
       __self: this
-    }, "Sell")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "Sell \uD83E\uDD11")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
@@ -188,7 +188,7 @@ var Header = function Header(props) {
         lineNumber: 32
       },
       __self: this
-    }, "Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "Account \uD83D\uDC7D")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/update",
       __source: {
         fileName: _jsxFileName,
@@ -201,7 +201,7 @@ var Header = function Header(props) {
         lineNumber: 35
       },
       __self: this
-    }, "Orders"))), !me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "Orders \uD83D\uDCD9"))), !me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/signup",
       __source: {
         fileName: _jsxFileName,
@@ -214,7 +214,7 @@ var Header = function Header(props) {
         lineNumber: 41
       },
       __self: this
-    }, "Sign In")));
+    }, "Sign In \uD83E\uDD37\u200D\u2642\uFE0F")));
   });
 };
 
