@@ -12,12 +12,7 @@ const StyledPage = styled.div`
   background: white;
   color: ${props => props.theme.black};
 `
-const Inner = styled.div`
-    max-width: ${props => props.theme.maxWidth};
-    margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid red;
-`
+
 
 export default class Page extends Component {
   render() {
@@ -26,9 +21,7 @@ export default class Page extends Component {
       <StyledPage>
         <Meta />
         <Header />
-        <Inner>
         {this.props.children}
-         </Inner>
       </StyledPage>   
       </ThemeProvider>
     )

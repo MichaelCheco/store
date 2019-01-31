@@ -16,8 +16,8 @@ justify-items: center;
     border: 1px solid black;
     width: 100%;
     text-align: center;
-height: 50px;
-text-decoration: none;
+    height: 50px;
+    text-decoration: none;
   }
 }
 `;

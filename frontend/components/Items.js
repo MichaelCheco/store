@@ -5,6 +5,15 @@ import ErrorMessage from './ErrorMessage'
 import Item from './Item'
 import Pagination from './Pagination';
 import { perPage } from '../config';
+import styled from 'styled-components';
+
+const ItemWrapper = styled.div`
+  border: 3px solid red;
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 2rem;
+`;
+
  const ITEMS_QUERY = gql`
  query ITEMS_QUERY($skip: Int = 0, $first: Int = ${perPage}) {
    items(skip: $skip, first: $first, orderBy: createdAt_DESC) {
@@ -21,7 +30,7 @@ import { perPage } from '../config';
 export default class Items extends Component {
   render() {
     return (
-      <div>
+      <ItemWrapper>
         <Pagination page={this.props.page} />
       <Query query={ITEMS_QUERY} variables={{
         skip: this.props.page * perPage - perPage,
@@ -36,7 +45,7 @@ export default class Items extends Component {
         }}
       </Query>
       <Pagination page={this.props.page}/>
-      </div>
+      </ItemWrapper>
     )
   }
 }

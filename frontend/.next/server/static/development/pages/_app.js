@@ -180,7 +180,7 @@ var Header = function Header(props) {
       lineNumber: 30
     },
     __self: this
-  }, "Shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Shop |")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/sell",
     __source: {
       fileName: _jsxFileName,
@@ -193,7 +193,7 @@ var Header = function Header(props) {
       lineNumber: 31
     },
     __self: this
-  }, "Sell")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Sell |")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
@@ -206,7 +206,7 @@ var Header = function Header(props) {
       lineNumber: 32
     },
     __self: this
-  }, "SignUp")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "SignUp |")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/update",
     __source: {
       fileName: _jsxFileName,
@@ -219,7 +219,7 @@ var Header = function Header(props) {
       lineNumber: 33
     },
     __self: this
-  }, "Orders")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Orders |")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
@@ -358,12 +358,6 @@ var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.wi
 })(["background:white;color:", ";"], function (props) {
   return props.theme.black;
 });
-var Inner = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "Page__Inner",
-  componentId: "sc-14vv5uc-1"
-})(["max-width:", ";margin:0 auto;padding:2rem;border:1px solid red;"], function (props) {
-  return props.theme.maxWidth;
-});
 
 var Page =
 /*#__PURE__*/
@@ -383,34 +377,28 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 20
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 21
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 22
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 23
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, this.props.children)));
+      }), this.props.children));
     }
   }]);
 

@@ -2,12 +2,26 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import DeleteItem from './DeleteItem'
+import styled from 'styled-components';
+
+const Inner = styled.div`
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 3px solid blue;
+`;
+const Img = styled.img`
+width: 100%;
+    height: 400px;
+    object-fit: cover;
+  
+`;
+
 export default class Item extends Component {
   render() {
     const { item } = this.props
     return (
-      <div>
-      {/* {item.image && <img src={item.image} alt={image.title} />} */}
+      <Inner>
       <Link
         href={{
           pathname: '/item',
@@ -17,7 +31,7 @@ export default class Item extends Component {
           <a>{item.title}</a>
         </Link>
         <p>{item.price}</p>
-        <img src={item.image} />
+        <Img src={item.image} />
         <p>{item.description}</p>
         <Link
           href={{
@@ -28,7 +42,7 @@ export default class Item extends Component {
           </Link>
           <button>add to cart</button>
           <DeleteItem id={item.id}>Delete</DeleteItem>
-      </div>
+      </Inner>
     )
   }
 }
