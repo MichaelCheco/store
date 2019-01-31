@@ -3,12 +3,36 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import DeleteItem from './DeleteItem'
 import styled from 'styled-components';
-
+import FormatMoney from '../lib/formatMoney'
 const Inner = styled.div`
     max-width: 400px;
     margin: 0 auto;
     padding: 2rem;
-    border: 3px solid blue;
+    border: 1px solid lightgray;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+`;
+const Actions = styled.div`
+  /* border: 1px solid lightgray; 
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  align-items: center;  */
+  display: grid;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1px;
+    margin-top: 10px;
+    /* background: ${props => props.theme.lightgrey}; */
+`;
+const Button = styled.div`
+border: 1px solid lightgray;
+padding: 10px;
+text-align: center;
+ ;
 `;
 const Img = styled.img`
 width: 100%;
@@ -28,20 +52,22 @@ export default class Item extends Component {
           query: { id: item.id },
         }}
         >
-          <a>{item.title}</a>
+          <h2>{item.title}</h2>
         </Link>
-        <p>{item.price}</p>
+        <p>{FormatMoney(item.price)}</p>
         <Img src={item.image} />
-        <p>{item.description}</p>
+        <Actions>
+
         <Link
           href={{
             pathname: 'update',
             query: { id: item.id },
           }}>
-            <a>Edit</a>
+            <Button>Edit</Button>
           </Link>
-          <button>add to cart</button>
+          <Button> Add to Cart 🛒</Button>
           <DeleteItem id={item.id}>Delete</DeleteItem>
+          </Actions>
       </Inner>
     )
   }

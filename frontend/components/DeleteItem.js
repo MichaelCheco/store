@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import { ITEMS_QUERY } from './Items'
-
+import styled from 'styled-components';
+const Button = styled.div`
+ border: 1px solid lightgray;
+padding: 10px;
+text-align: center;
+ `;
 const DELETE_ITEM_MUTATION = gql`
   mutation DELETE_ITEM_MUTATION($id: ID!) {
     deleteItem(id: $id) {
@@ -25,7 +30,7 @@ class DeleteItem extends Component {
         update={this.update}
         >
           {(deleteItem, { error }) => (
-            <button
+            <Button
             onClick={() => {
               console.log(this.props.children)
                 if(confirm('Are you sure you want to delete this item?')) {
@@ -34,7 +39,7 @@ class DeleteItem extends Component {
               }}
             >
               {this.props.children}
-            </button>
+            </Button>
           )}
         </Mutation>
     )

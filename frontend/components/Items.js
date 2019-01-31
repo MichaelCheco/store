@@ -8,10 +8,13 @@ import { perPage } from '../config';
 import styled from 'styled-components';
 
 const ItemWrapper = styled.div`
-  border: 3px solid red;
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-gap: 10px;
 `;
 
  const ITEMS_QUERY = gql`
@@ -44,7 +47,7 @@ export default class Items extends Component {
           )
         }}
       </Query>
-      <Pagination page={this.props.page}/>
+      {/* <Pagination page={this.props.page}/> */}
       </ItemWrapper>
     )
   }
