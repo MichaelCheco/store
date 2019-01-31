@@ -3,14 +3,12 @@ import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import Error from './ErrorMessage'
 import { CURRENT_USER_QUERY } from './User'
-const SIGNUP_MUTATION = gql`
-  mutation SIGNUP_MUTATION(
-    $name: String!
+const SIGNIN_MUTATION = gql`
+  mutation SIGNIN_MUTATION(
     $password: String!
     $email: String!
     ) {
-      signup(
-        name: $name,
+      signin(
         password: $password,
         email: $email,
       ) {
@@ -21,7 +19,7 @@ const SIGNUP_MUTATION = gql`
     }
 `
 
-class Signup extends Component {
+class Signin extends Component {
   state = {
     name: '',
     password: '',
@@ -34,33 +32,22 @@ class Signup extends Component {
   render() {
     return (
       <Mutation 
-      mutation={SIGNUP_MUTATION} 
+      mutation={SIGNIN_MUTATION} 
       variables={this.state}
       refetchQueries={[
         { query: CURRENT_USER_QUERY }
       ]}
       >
-        {( signup ,{loading, error }) => (
+        {( signin ,{loading, error }) => (
             <form method="post" onSubmit={ async e => {
               e.preventDefault();
-              const res = await signup();
+              const res = await signin();
               console.log(res)
               this.setState({name: '', email: '', password: ''})
             }}>
             <fieldset disabled={loading} aria-busy={loading}>
+            <h2>Sign Into Your Account 🚀</h2>
             <Error error={error} />
-              <label htmlFor="name">
-              Name
-              <input 
-              type="text"
-              name="name"
-              id="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              placeholder="name"
-              required
-              />
-              </label>
               <label htmlFor="email">
               Email
               <input 
@@ -85,7 +72,7 @@ class Signup extends Component {
               required
               />
               </label>
-              <button type="submit">Register!</button>
+              <button type="submit">Sign In 💂‍♀️</button>
         </fieldset>
             </form>
         )}
@@ -94,4 +81,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Signin;
