@@ -17,23 +17,33 @@ Router.onRouteChangeError = () => {
 
 
 const Header = props => (
-  <nav>
-    <Wrapper>
       <User>
-        {({data: { me }}) => {
-          if(me) {
-            return <p>{me.name}</p>
-          }
-          return null;
-        }}
+        {({data: { me }}) => (
+    <Wrapper>
+      <Link href="/shop">
+      <a>Shop</a>
+      </Link>
+      {me && (
+        <>
+      <Link href="/sell"><
+        a>Sell</a>
+        </Link>
+      <Link href="/">
+      <a>Account</a>
+      </Link>
+      <Link href="/update">
+      <a>Orders</a>
+      </Link>
+      </>
+      )}
+        {!me && (
+          <Link href="/signup">
+      <a>Sign In</a>
+      </Link>
+    )}
+</Wrapper>
+        )}
       </User>
-      <Link href="/shop"><a>Shop |</a></Link>
-      <Link href="/sell"><a>Sell |</a></Link>
-      <Link href="/signup"><a>SignUp |</a></Link>
-      <Link href="/update"><a>Orders |</a></Link>
-      <Link href="/"><a>Sign Out</a></Link>
-    </Wrapper>
-  </nav>
 );
 
 export default Header;
