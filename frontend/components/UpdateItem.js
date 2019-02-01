@@ -84,7 +84,7 @@ class UpdateItem extends Component {
                 <label htmlFor="price">
                   price
                   <input 
-                    type="text"
+                    type="number"
                     id="price"
                     name="price"
                     placeholder="price"

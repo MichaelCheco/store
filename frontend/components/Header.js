@@ -21,7 +21,7 @@ const Header = props => (
         {({data: { me }}) => (
     <Wrapper>
       <Link href="/shop">
-      <a>Shop 🛍️</a>
+      <a>Shop 🛍️ </a>
       </Link>
       {me && (
         <>

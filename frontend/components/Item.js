@@ -65,7 +65,7 @@ export default class Item extends Component {
           }}>
             <Button>Edit</Button>
           </Link>
-          <Button> Add to Cart 🛒</Button>
+          <Button>Add to Cart</Button>
           <DeleteItem id={item.id}>Delete</DeleteItem>
           </Actions>
       </Inner>
