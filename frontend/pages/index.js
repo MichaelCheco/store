@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
+import Image from '../components/HomeImage'
 export default () => (
-  <h1>Hello</h1>
+<Image />
 );
