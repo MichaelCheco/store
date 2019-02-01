@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import Header from './Header'
 import Meta from './Meta'
 import styled, { ThemeProvider } from 'styled-components';
-
+import AuthHeader from './AuthHeader'
 const theme = {
   maxWidth: '1000px',
   black: '#393939',
@@ -20,6 +20,7 @@ export default class Page extends Component {
       <ThemeProvider theme={theme}> 
       <StyledPage>
         <Meta />
+        <AuthHeader />
         <Header />
         {this.props.children}
       </StyledPage>   
