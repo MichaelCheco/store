@@ -3,7 +3,7 @@ import { Mutation, Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import Router from 'next/router'
 import Error from './ErrorMessage'
-
+import Link from 'next/link'
 const SINGLE_ITEM_QUERY = gql`
   query SINGLE_ITEM_QUERY($id: ID!) {
     item(where: { id: $id }) {
@@ -50,6 +50,10 @@ class UpdateItem extends Component {
         id: this.props.id,
         ...this.state
       }
+    })
+    Router.push({
+      pathname: '/item',
+      query: { id: this.props.id },
     })
   }
   render() {
