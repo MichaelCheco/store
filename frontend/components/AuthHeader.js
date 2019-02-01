@@ -2,11 +2,19 @@ import styled from 'styled-components';
 import React from 'react';
 import Link from 'next/link';
 import User from './User'
-
+const Name = styled.div`
+  width: 25%;
+  display: flex;
+  z-index: 1;
+  color: white;
+  font-size: 25px;
+  margin-left: 50px;
+  margin-top: -3px;
+`;
 const Div = styled.div`
   display: flex;
   background: black;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 45px;
 `;
 const Wrapper = styled.div`
@@ -29,6 +37,12 @@ const Wrapper = styled.div`
 
 const AuthHeader = props => (
   <Div>
+    <User>
+      {({data: { me }}) => (
+        me ? <Name>Welcome {me.name}</Name> : <h5>.</h5>
+        // <Name>Welcome {me.name}</Name>
+      )}
+    </User>
     <Wrapper>
       <Link href="/signup">
     <a>LOG IN</a>   
