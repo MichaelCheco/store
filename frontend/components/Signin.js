@@ -3,6 +3,7 @@ import { Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 import Error from './ErrorMessage'
 import { CURRENT_USER_QUERY } from './User'
+import Router from 'next/router'
 const SIGNIN_MUTATION = gql`
   mutation SIGNIN_MUTATION(
     $password: String!
@@ -42,6 +43,9 @@ class Signin extends Component {
             <form method="post" onSubmit={ async e => {
               e.preventDefault();
               const res = await signin();
+              Router.push({
+                pathname: '/',
+              })
               console.log(res)
               this.setState({name: '', email: '', password: ''})
             }}>
