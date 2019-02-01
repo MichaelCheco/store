@@ -15,14 +15,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/shop": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/update": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/item": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
