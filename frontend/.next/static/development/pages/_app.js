@@ -20,52 +20,78 @@ var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/
 
 
 
+var Name = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "AuthHeader__Name",
+  componentId: "sc-1g0fic2-0"
+})(["width:25%;display:flex;z-index:1;color:white;font-size:25px;margin-left:50px;margin-top:-3px;"]);
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "AuthHeader__Div",
-  componentId: "sc-1g0fic2-0"
-})(["display:flex;background:black;justify-content:flex-end;height:45px;"]);
+  componentId: "sc-1g0fic2-1"
+})(["display:flex;background:black;justify-content:space-between;height:45px;"]);
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "AuthHeader__Wrapper",
-  componentId: "sc-1g0fic2-1"
+  componentId: "sc-1g0fic2-2"
 })(["display:flex;align-items:center;width:30%;a{margin:0 10px;width:25%;color:whitesmoke;font-weight:bold;font-size:16px;white-space:nowrap;text-decoration:none;&:hover{text-decoration:underline;}}"]);
 
 var AuthHeader = function AuthHeader(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
+    },
+    __self: this
+  }, function (_ref) {
+    var me = _ref.data.me;
+    return me ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Name, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "Welcome ", me.name) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, ".") // <Name>Welcome {me.name}</Name>
+    ;
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 48
     },
     __self: this
   }, "LOG IN")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 51
     },
     __self: this
   }, "CREATE AN ACCOUNT"))));
@@ -112,7 +138,7 @@ var Div = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConf
 var H1 = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h1.withConfig({
   displayName: "Header__H1",
   componentId: "sc-1s2mubi-1"
-})(["display:flex;height:65px;margin-left:60px;margin-top:0;"]);
+})(["display:flex;height:65px;margin-left:50px;margin-top:0;"]);
 
 next_router__WEBPACK_IMPORTED_MODULE_2___default.a.onRouteChangeStart = function () {
   nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.start();

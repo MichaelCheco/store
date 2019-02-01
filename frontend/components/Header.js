@@ -27,7 +27,7 @@ grid-template-rows: 65px;
 const H1 = styled.h1`
   display: flex;
   height: 65px;
-  margin-left: 60px;
+  margin-left: 50px;
   margin-top: 0;
 `;
 Router.onRouteChangeStart = () => {
