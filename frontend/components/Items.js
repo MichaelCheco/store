@@ -6,15 +6,20 @@ import Item from './Item'
 import Pagination from './Pagination';
 import { perPage } from '../config';
 import styled from 'styled-components';
-
+import HomeImage from './HomeImage'
+const Div = styled.div`
+  border: 1px solid black;
+`;
 const ItemWrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 60px 1fr;
   grid-gap: 10px;
+  z-index: 1;
+  background: white;
 `;
 
  const ITEMS_QUERY = gql`
@@ -33,6 +38,8 @@ const ItemWrapper = styled.div`
 export default class Items extends Component {
   render() {
     return (
+      <Div>
+
       <ItemWrapper>
         <Pagination page={this.props.page} />
       <Query query={ITEMS_QUERY} variables={{
@@ -44,11 +51,12 @@ export default class Items extends Component {
           if(error) return <ErrorMessage error={error}/>
           return (
             data.items.map(item => <Item item={item} key={item.id} />)
-          )
-        }}
+            )
+          }}
       </Query>
       {/* <Pagination page={this.props.page}/> */}
       </ItemWrapper>
+          </Div>
     )
   }
 }

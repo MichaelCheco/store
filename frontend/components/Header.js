@@ -9,6 +9,7 @@ import styled from 'styled-components';
 const Div = styled.div`
 display: grid;
 width: 100%;
+border: 1px solid black;
 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 grid-template-rows: 75px;
 a {

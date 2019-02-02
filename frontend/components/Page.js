@@ -4,7 +4,7 @@ import Meta from './Meta'
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import AuthHeader from './AuthHeader'
 const theme = {
-  maxWidth: '1000px',
+  maxWidth: '1500px',
   black: '#393939',
 
 }

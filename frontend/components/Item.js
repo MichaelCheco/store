@@ -5,7 +5,7 @@ import DeleteItem from './DeleteItem'
 import styled from 'styled-components';
 import FormatMoney from '../lib/formatMoney'
 const Inner = styled.div`
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
     padding: 2rem;
     border: 1px solid lightgray;
@@ -14,19 +14,12 @@ const Inner = styled.div`
     flex-direction: column;
 `;
 const Actions = styled.div`
-  /* border: 1px solid lightgray; 
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  height: 60px;
-  align-items: center;  */
   display: grid;
     width: 100%;
     border-top: 1px solid lightgray;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1px;
     margin-top: 10px;
-    /* background: ${props => props.theme.lightgrey}; */
 `;
 const Button = styled.div`
 border: 1px solid lightgray;
@@ -36,7 +29,7 @@ text-align: center;
 `;
 const Img = styled.img`
 width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
   
 `;

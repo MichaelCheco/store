@@ -229,7 +229,7 @@ var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.div.withConfig({
   displayName: "Header__Div",
   componentId: "sc-1s2mubi-0"
-})(["display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-template-rows:75px;a{font-size:15px;font-weight:bold;}@media (max-width:500px){grid-template-columns:100%;grid-template-rows:repeat(5,50px);border:1px solid black;a{display:block;border:1px solid black;width:100%;text-align:center;height:50px;text-decoration:none;}}"]);
+})(["display:grid;width:100%;border:1px solid black;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-template-rows:75px;a{font-size:15px;font-weight:bold;}@media (max-width:500px){grid-template-columns:100%;grid-template-rows:repeat(5,50px);border:1px solid black;a{display:block;border:1px solid black;width:100%;text-align:center;height:50px;text-decoration:none;}}"]);
 var H1 = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.h1.withConfig({
   displayName: "Header__H1",
   componentId: "sc-1s2mubi-1"
@@ -251,7 +251,7 @@ var Header = function Header(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, function (_ref) {
@@ -259,71 +259,71 @@ var Header = function Header(props) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 53
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H1, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 54
       },
       __self: this
     }, "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 55
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/shop",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 56
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 57
       },
       __self: this
     }, "SHOP")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/sell",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, "SELL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 64
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 65
       },
       __self: this
     }, "ACCOUNT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/update",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 67
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 68
       },
       __self: this
     }, "ORDERS")))));
@@ -459,7 +459,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var theme = {
-  maxWidth: '1000px',
+  maxWidth: '1500px',
   black: '#393939'
 };
 var StyledPage = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
@@ -619,7 +619,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endpoint", function() { return endpoint; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 var endpoint = 'http://localhost:4444';
-var perPage = 4;
+var perPage = 8;
 
 /***/ }),
 
