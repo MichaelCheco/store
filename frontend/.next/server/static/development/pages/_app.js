@@ -314,7 +314,7 @@ var Header = function Header(props) {
       },
       __self: this
     }, "ACCOUNT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/update",
+      href: "/signout",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 67
@@ -326,7 +326,7 @@ var Header = function Header(props) {
         lineNumber: 68
       },
       __self: this
-    }, "ORDERS")))));
+    }, "SIGN OUT")))));
   });
 };
 

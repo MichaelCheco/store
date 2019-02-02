@@ -64,8 +64,8 @@ const Header = props => (
       <Link href="/">
       <a>ACCOUNT</a>
       </Link>
-      <Link href="/update">
-      <a>ORDERS</a>
+      <Link href="/signout">
+      <a>SIGN OUT</a>
       </Link>
       </>
     )}
