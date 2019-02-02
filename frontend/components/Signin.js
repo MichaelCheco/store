@@ -50,8 +50,8 @@ class Signin extends Component {
               <label htmlFor="email">
                 Email
                 <input
-                  type="email"6
-                  name="emailﬂ"
+                  type="email"
+                  name="email"
                   id="email"
                   value={this.state.email}
                   onChange={this.handleChange}
