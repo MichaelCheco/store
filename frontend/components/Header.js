@@ -10,7 +10,11 @@ const Div = styled.div`
 display: grid;
 width: 100%;
 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-grid-template-rows: 65px;
+grid-template-rows: 75px;
+a {
+  font-size: 15px;
+  font-weight: bold;
+}
 @media (max-width: 500px) {
   grid-template-columns: 100%;
   grid-template-rows: repeat(5, 50px);
@@ -29,6 +33,7 @@ const H1 = styled.h1`
   height: 65px;
   margin-left: 50px;
   margin-top: 0;
+  color: white;
 `;
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -45,21 +50,21 @@ const Header = props => (
       <User>
         {({data: { me }}) => (
           <Div>
-      <H1>Bean & Bean ☕</H1>
+      <H1>.</H1>
           <Wrapper>
       <Link href="/shop">
-      <a>Shop 🛍️ </a>
+      <a>SHOP</a>
       </Link>
       {me && (
         <>
       <Link href="/sell"><
-        a>Sell 🤑</a>
+        a>SELL</a>
         </Link>
       <Link href="/">
-      <a>Account 👽</a>
+      <a>ACCOUNT</a>
       </Link>
       <Link href="/update">
-      <a>Orders 📙</a>
+      <a>ORDERS</a>
       </Link>
       </>
     )}

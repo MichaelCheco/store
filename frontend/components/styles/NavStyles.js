@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+margin-left: 17%;
+width: 70%;
+grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
 align-items: center;
 a {
   text-decoration: none;

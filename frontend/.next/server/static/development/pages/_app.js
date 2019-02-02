@@ -117,7 +117,7 @@ var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/
 var Name = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "AuthHeader__Name",
   componentId: "sc-1g0fic2-0"
-})(["width:25%;display:flex;z-index:1;color:white;font-size:25px;margin-left:50px;margin-top:-3px;"]);
+})(["width:25%;display:flex;color:white;font-size:18px;margin-left:50px;margin-top:4px;"]);
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "AuthHeader__Div",
   componentId: "sc-1g0fic2-1"
@@ -125,19 +125,19 @@ var Div = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfi
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "AuthHeader__Wrapper",
   componentId: "sc-1g0fic2-2"
-})(["display:flex;align-items:center;width:30%;a{margin:0 10px;width:25%;color:whitesmoke;font-weight:bold;font-size:16px;white-space:nowrap;text-decoration:none;&:hover{text-decoration:underline;}}"]);
+})(["display:flex;align-items:center;width:30%;a{margin:0 10px;width:25%;color:whitesmoke;font-weight:bold;font-size:14px;white-space:nowrap;text-decoration:none;&:hover{text-decoration:underline;}}"]);
 
 var AuthHeader = function AuthHeader(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Div, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 39
     },
     __self: this
   }, function (_ref) {
@@ -145,13 +145,13 @@ var AuthHeader = function AuthHeader(props) {
     return me ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Name, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 41
       },
       __self: this
-    }, "Welcome ", me.name) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
+    }, "WELCOME ", me.name.toUpperCase()) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 41
       },
       __self: this
     }, ".") // <Name>Welcome {me.name}</Name>
@@ -159,33 +159,33 @@ var AuthHeader = function AuthHeader(props) {
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }, "LOG IN")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }, "CREATE AN ACCOUNT"))));
@@ -229,11 +229,11 @@ var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/
 var Div = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.div.withConfig({
   displayName: "Header__Div",
   componentId: "sc-1s2mubi-0"
-})(["display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-template-rows:65px;@media (max-width:500px){grid-template-columns:100%;grid-template-rows:repeat(5,50px);border:1px solid black;a{display:block;border:1px solid black;width:100%;text-align:center;height:50px;text-decoration:none;}}"]);
+})(["display:grid;width:100%;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));grid-template-rows:75px;a{font-size:15px;font-weight:bold;}@media (max-width:500px){grid-template-columns:100%;grid-template-rows:repeat(5,50px);border:1px solid black;a{display:block;border:1px solid black;width:100%;text-align:center;height:50px;text-decoration:none;}}"]);
 var H1 = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.h1.withConfig({
   displayName: "Header__H1",
   componentId: "sc-1s2mubi-1"
-})(["display:flex;height:65px;margin-left:50px;margin-top:0;"]);
+})(["display:flex;height:65px;margin-left:50px;margin-top:0;color:white;"]);
 
 next_router__WEBPACK_IMPORTED_MODULE_2___default.a.onRouteChangeStart = function () {
   nprogress__WEBPACK_IMPORTED_MODULE_3___default.a.start();
@@ -251,7 +251,7 @@ var Header = function Header(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 50
     },
     __self: this
   }, function (_ref) {
@@ -259,74 +259,74 @@ var Header = function Header(props) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Div, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 52
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(H1, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 53
       },
       __self: this
-    }, "Bean & Bean \u2615"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 54
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/shop",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 55
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 56
       },
       __self: this
-    }, "Shop \uD83D\uDECD\uFE0F ")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "SHOP")), me && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/sell",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 60
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 60
       },
       __self: this
-    }, "Sell \uD83E\uDD11")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "SELL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 63
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 64
       },
       __self: this
-    }, "Account \uD83D\uDC7D")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }, "ACCOUNT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: "/update",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 66
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 67
       },
       __self: this
-    }, "Orders \uD83D\uDCD9")))));
+    }, "ORDERS")))));
   });
 };
 
@@ -602,7 +602,7 @@ __webpack_require__.r(__webpack_exports__);
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "NavStyles__Wrapper",
   componentId: "x3z0n-0"
-})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));align-items:center;a{text-decoration:none;color:black;font-size:18px;}"]);
+})(["display:grid;margin-left:17%;width:70%;grid-template-columns:repeat(auto-fit,minmax(50px,1fr));align-items:center;a{text-decoration:none;color:black;font-size:18px;}"]);
 /* harmony default export */ __webpack_exports__["default"] = (Wrapper);
 
 /***/ }),

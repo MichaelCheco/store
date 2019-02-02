@@ -5,11 +5,10 @@ import User from './User'
 const Name = styled.div`
   width: 25%;
   display: flex;
-  z-index: 1;
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   margin-left: 50px;
-  margin-top: -3px;
+  margin-top: 4px;
 `;
 const Div = styled.div`
   display: flex;
@@ -26,7 +25,7 @@ const Wrapper = styled.div`
     width: 25%;
     color: whitesmoke;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     text-decoration: none;
     &:hover {
@@ -39,7 +38,7 @@ const AuthHeader = props => (
   <Div>
     <User>
       {({data: { me }}) => (
-        me ? <Name>Welcome {me.name}</Name> : <h5>.</h5>
+        me ? <Name>WELCOME {me.name.toUpperCase()}</Name> : <h5>.</h5>
         // <Name>Welcome {me.name}</Name>
       )}
     </User>
