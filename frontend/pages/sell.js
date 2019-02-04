@@ -1,5 +1,9 @@
-import CreateItem from '../components/CreateItem'
-
+import CreateItem from '../components/CreateItem';
+import PleaseSignIn from '../components/PleaseSignIn';
 export default props => (
-  <CreateItem />
-)
+  <div>
+    <PleaseSignIn>
+      <CreateItem />
+    </PleaseSignIn>
+  </div>
+);
