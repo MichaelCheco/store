@@ -212,10 +212,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graphql-tag */ "graphql-tag");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_CartStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/CartStyles */ "./components/styles/CartStyles.js");
-/* harmony import */ var _styles_Supreme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/Supreme */ "./components/styles/Supreme.js");
-/* harmony import */ var _styles_CloseButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/CloseButton */ "./components/styles/CloseButton.js");
-/* harmony import */ var _styles_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/Button */ "./components/styles/Button.js");
+/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./components/User.js");
+/* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
+/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
+/* harmony import */ var _styles_CartStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/CartStyles */ "./components/styles/CartStyles.js");
+/* harmony import */ var _styles_Supreme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/Supreme */ "./components/styles/Supreme.js");
+/* harmony import */ var _styles_CloseButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles/CloseButton */ "./components/styles/CloseButton.js");
+/* harmony import */ var _styles_Button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./styles/Button */ "./components/styles/Button.js");
+/* harmony import */ var _CartItem__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CartItem */ "./components/CartItem.js");
 var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/Cart.js";
 
 function _templateObject2() {
@@ -247,6 +251,10 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
+
+
+
 /* client directive tells apollo to not go to the server 
 for the data and instead to grab it from the apollo store */
 
@@ -254,81 +262,181 @@ var LOCAL_STATE_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_temp
 var TOGGLE_CART_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject2());
 
 var Cart = function Cart() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Mutation"], {
-    mutation: TOGGLE_CART_MUTATION,
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
-  }, function (toggleCart) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
-      query: LOCAL_STATE_QUERY,
+  }, function (_ref) {
+    var me = _ref.data.me;
+    if (!me) return null;
+    console.log(me);
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Mutation"], {
+      mutation: TOGGLE_CART_MUTATION,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 33
       },
       __self: this
-    }, function (_ref) {
-      var data = _ref.data;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CartStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        open: data.cartOpen,
+    }, function (toggleCart) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
+        query: LOCAL_STATE_QUERY,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 35
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        onClick: toggleCart,
-        title: "close",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, "Your Cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }, "You Have __ Items in your cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }, "$10.10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        },
-        __self: this
-      }, "Checkout")));
+      }, function (_ref2) {
+        var data = _ref2.data;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CartStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          open: data.cartOpen,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 37
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          onClick: toggleCart,
+          title: "close",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          },
+          __self: this
+        }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, me.name, "'s Cart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
+        }, "You Have ", me.cart.length, " Item", me.cart.length === 1 ? '' : 's', " in your cart")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        }, me.cart.map(function (cartItem) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartItem__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            key: cartItem.id,
+            cartItem: cartItem,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            },
+            __self: this
+          });
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          },
+          __self: this
+        }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_4__["default"])(me.cart))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Button__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        }, "Checkout")));
+      });
     });
   });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Cart);
 
+
+/***/ }),
+
+/***/ "./components/CartItem.js":
+/*!********************************!*\
+  !*** ./components/CartItem.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/formatMoney */ "./lib/formatMoney.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/CartItem.js";
+
+
+
+var CartItemStyles = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.li.withConfig({
+  displayName: "CartItem__CartItemStyles",
+  componentId: "i1d466-0"
+})(["padding:1rem 0;border-bottom:1px solid lightgray;display:grid;align-items:center;grid-template-columns:auto 1fr auto;img{margin-right:10px;}h3,p{margin:0;}"]);
+
+var CartItem = function CartItem(_ref) {
+  var cartItem = _ref.cartItem;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItemStyles, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    width: "110",
+    height: "110",
+    src: cartItem.item.image,
+    alt: cartItem.item.title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cart-item-details",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, cartItem.item.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price * cartItem.quantity), ' - ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, cartItem.quantity, " \xD7 ", Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price), " each"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CartItem);
 
 /***/ }),
 
@@ -722,7 +830,7 @@ var _jsxFileName = "/Users/michaelcheco/side-projects/store/frontend/components/
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\tquery CURRENT_USER_QUERY {\n\t\tme {\n\t\t\tid\n\t\t\temail\n\t\t\tname\n\t\t\tpermissions\n\t\t\tcart {\n\t\t\t\tid\n\t\t\t\tquantity\n\t\t\t\titem {\n\t\t\t\t\tid\n\t\t\t\t\tprice\n\t\t\t\t\timage\n\t\t\t\t\ttitle\n\t\t\t\t\tdescription\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -742,7 +850,7 @@ var User = function User(props) {
     query: CURRENT_USER_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }), function (payload) {
@@ -874,6 +982,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 var endpoint = 'http://localhost:4444';
 var perPage = 8;
+
+/***/ }),
+
+/***/ "./lib/calcTotalPrice.js":
+/*!*******************************!*\
+  !*** ./lib/calcTotalPrice.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return calcTotalPrice; });
+function calcTotalPrice(cart) {
+  return cart.reduce(function (tally, cartItem) {
+    if (!cartItem.item) return tally;
+    return tally + cartItem.quantity * cartItem.item.price;
+  }, 0);
+}
+
+/***/ }),
+
+/***/ "./lib/formatMoney.js":
+/*!****************************!*\
+  !*** ./lib/formatMoney.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function (amount) {
+  var options = {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  }; // if its a whole, dollar amount, leave off the .00
+
+  if (amount % 100 === 0) options.minimumFractionDigits = 0;
+  var formatter = new Intl.NumberFormat('en-US', options);
+  return formatter.format(amount / 100);
+});
 
 /***/ }),
 
