@@ -10,6 +10,7 @@ import NProgress from 'nprogress';
 import Wrapper from './styles/NavStyles';
 import User from './User';
 import styled from 'styled-components';
+import CartCount from './CartCount';
 const Div = styled.div`
 	display: grid;
 	width: 100%;
@@ -72,7 +73,14 @@ const Header = props => (
 								<a>SIGN OUT</a>
 							</Link>
 							<Mutation mutation={TOGGLE_CART_MUTATION}>
-								{toggleCart => <button onClick={toggleCart}>My Cart</button>}
+								{toggleCart => (
+									<button onClick={toggleCart}>
+										My Cart
+										<CartCount
+											count={me.cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0)}
+										/>
+									</button>
+								)}
 							</Mutation>
 							<Cart />
 						</>
