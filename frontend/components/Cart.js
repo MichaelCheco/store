@@ -10,6 +10,7 @@ import Supreme from './styles/Supreme';
 import CloseButton from './styles/CloseButton';
 import Button from './styles/Button';
 import CartItem from './CartItem';
+import TakeMyMoney from './TakeMyMoney';
 
 /* client directive tells apollo to not go to the server 
 for the data and instead to grab it from the apollo store */
@@ -55,7 +56,9 @@ const Cart = () => (
 					</ul>
 					<footer>
 						<p>{formatMoney(calcTotalPrice(me.cart))}</p>
-						<Button>Checkout</Button>
+						<TakeMyMoney>
+							<Button>Checkout</Button>
+						</TakeMyMoney>
 					</footer>
 				</CartStyles>
 			);
