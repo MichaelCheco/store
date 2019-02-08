@@ -245,6 +245,34 @@ const Mutations = {
 			info
 		);
 	},
+	async createOrder(parent, args, ctx, info) {
+		// 1. query current user and make sure they are signed in
+			const { userId } = ctx.request;
+			if(!userId) throw new Error('You must be signed in to complete this order.')
+			const user = await ctx.db.query.user({ where: { id: userId }},
+				`{
+					id 
+					name 
+					email 
+					cart { 
+						id 
+						quantity
+						 item { title price id description image }
+						}}`
+						 )
+		// 2. recalculate the total for the price
+
+		// 3. create the stripe charge
+
+		// 4. convert cart items to oder items
+
+		// 5. create the order
+
+		// 6. clean up = clean the users cat, delete cart items
+
+		// 7. return the order to the client
+
+	}
 };
 
 module.exports = Mutations;
