@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import ErrorMessage from './ErrorMessage';
+import Search from './Search';
 import Item from './Item';
 import Pagination from './Pagination';
 import { perPage } from '../config';
@@ -40,6 +41,7 @@ export default class Items extends Component {
 		return (
 			<Div>
 				<ItemWrapper>
+					<Search />
 					<Pagination page={this.props.page} />
 					<Query
 						query={ITEMS_QUERY}
