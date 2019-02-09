@@ -1,70 +1,50 @@
 import React, { Component } from 'react';
-import AddToCart from './AddToCart';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
+import Title from './styles/Title';
+import ItemStyles from './styles/ItemStyles';
+import PriceTag from './styles/PriceTag';
+import formatMoney from '../lib/formatMoney';
 import DeleteItem from './DeleteItem';
-import styled from 'styled-components';
-import FormatMoney from '../lib/formatMoney';
-//350
-const Inner = styled.div`
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 2rem;
-	border: 1px solid lightgray;
-	box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
-	display: flex;
-	flex-direction: column;
-	grid-row: 3;
-	@media (max-width: 500px) {
-		margin: 10px 0;
-	}
-`;
-const Actions = styled.div`
-	display: grid;
-	width: 100%;
-	border-top: 1px solid lightgray;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	grid-gap: 1px;
-	margin-top: 10px;
-`;
-const Button = styled.div`
-	border: 1px solid lightgray;
-	padding: 10px;
-	text-align: center;
-`;
-const Img = styled.img`
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-`;
+import AddToCart from './AddToCart';
 
 export default class Item extends Component {
+	static propTypes = {
+		item: PropTypes.object.isRequired,
+	};
+
 	render() {
 		const { item } = this.props;
 		return (
-			<Inner>
-				<Link
-					href={{
-						pathname: '/item',
-						query: { id: item.id },
-					}}
-				>
-					<h2>{item.title}</h2>
-				</Link>
-				<p> {FormatMoney(item.price)}</p>
-				<Img src={item.image} />
-				<Actions>
+			<ItemStyles>
+				{item.image && <img src={item.image} alt={item.title} />}
+
+				<Title>
+					<Link
+						href={{
+							pathname: '/item',
+							query: { id: item.id },
+						}}
+					>
+						<a>{item.title}</a>
+					</Link>
+				</Title>
+				<PriceTag>{formatMoney(item.price)}</PriceTag>
+				<p>{item.description}</p>
+
+				<div className="buttonList">
 					<Link
 						href={{
 							pathname: 'update',
 							query: { id: item.id },
 						}}
 					>
-						<Button>Edit</Button>
+						<a>Edit ✏️</a>
 					</Link>
 					<AddToCart id={item.id} />
-					<DeleteItem id={item.id}>Delete</DeleteItem>
-				</Actions>
-			</Inner>
+					<DeleteItem id={item.id}>Delete This Item</DeleteItem>
+				</div>
+			</ItemStyles>
 		);
 	}
 }

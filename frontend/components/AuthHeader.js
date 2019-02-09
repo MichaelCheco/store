@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import React from 'react';
 import Link from 'next/link';
 import User from './User';
+import Search from './Search';
+
 const Name = styled.div`
 	width: 25%;
 	display: flex;
@@ -13,7 +15,7 @@ const Name = styled.div`
 		align-self: center;
 		width: 33%;
 		white-space: nowrap;
-		margin-left: 8px;
+		margin-right: 18px;
 	}
 `;
 // 50px
@@ -25,7 +27,6 @@ const Div = styled.div`
 	@media (max-width: 500px) {
 		display: flex;
 		width: 100%;
-
 		justify-content: space-between;
 	}
 `;
@@ -57,20 +58,25 @@ const Wrapper = styled.div`
 		}
 	}
 `;
-
+const Yerr = styled.div`
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+`;
 const AuthHeader = props => (
 	<Div>
 		<User>
 			{({ data: { me } }) =>
 				me ? (
-					<>
+					<Yerr>
+						<Search />
 						<Name>WELCOME {me.name.toUpperCase()}</Name>
 						<Signout>
 							<Link href="/signout">
 								<a>SIGN OUT</a>
 							</Link>
 						</Signout>
-					</>
+					</Yerr>
 				) : (
 					<Wrapper>
 						<Link href="/signup">

@@ -10,6 +10,7 @@ const DropDown = styled.div`
 const DropDownItem = styled.div`
 	border-bottom: 1px solid ${props => props.theme.lightgrey};
 	background: ${props => (props.highlighted ? '#f7f7f7' : 'white')};
+
 	padding: 1rem;
 	transition: all 0.2s;
 	${props => (props.highlighted ? 'padding-left: 2rem;' : null)};
@@ -32,6 +33,7 @@ const glow = keyframes`
 
 const SearchStyles = styled.div`
 	position: relative;
+	grid-column: 1 / span 2;
 	grid-row: 2;
 	input {
 		width: 100%;
@@ -39,6 +41,8 @@ const SearchStyles = styled.div`
 		border: 0;
 		font-size: 2rem;
 		outline-color: lightgrey;
+		background: black;
+		color: white;
 		&.loading {
 			animation: ${glow} 0.5s ease-in-out infinite alternate;
 		}
