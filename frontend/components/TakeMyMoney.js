@@ -18,20 +18,22 @@ class TakeMyMoney extends Component {
 	render() {
 		return (
 			<User>
-				{({ data: { me } }) => (
-					<StripeCheckout
-						amount={calcTotalPrice(me.cart)}
-						name="Michael Checo"
-						description={`Order of ${totalItems(me.cart)} items`}
-						image={me.cart[0].item && me.cart[0].item.image}
-						stripeKey="pk_test_eeSq6Wjt98teirL3HKvQ3wTK"
-						currency="USD"
-						email={me.email}
-						token={res => this.onToken(res)}
-					>
-						{this.props.children}
-					</StripeCheckout>
-				)}
+				{({ data: { me } }) =>
+					me && (
+						<StripeCheckout
+							amount={calcTotalPrice(me.cart)}
+							name="Michael Checo"
+							description={`Order of ${totalItems(me.cart)} items`}
+							image={me.cart[0].item && me.cart[0].item.image}
+							stripeKey="pk_test_eeSq6Wjt98teirL3HKvQ3wTK"
+							currency="USD"
+							email={me.email}
+							token={res => this.onToken(res)}
+						>
+							{this.props.children}
+						</StripeCheckout>
+					)
+				}
 			</User>
 		);
 	}

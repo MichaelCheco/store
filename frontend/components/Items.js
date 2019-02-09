@@ -10,6 +10,9 @@ import styled from 'styled-components';
 import HomeImage from './HomeImage';
 const Div = styled.div`
 	border: 1px solid black;
+	@media (max-width: 500px) {
+		border: none;
+	}
 `;
 const ItemWrapper = styled.div`
 	max-width: ${props => props.theme.maxWidth};
@@ -17,10 +20,15 @@ const ItemWrapper = styled.div`
 	padding: 2rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 60px 1fr;
+	grid-template-rows: 80px 50px 1fr;
 	grid-gap: 10px;
 	z-index: 1;
 	background: white;
+	@media (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		margin-top: 0px;
+	}
 `;
 
 const ITEMS_QUERY = gql`

@@ -4,14 +4,19 @@ import Link from 'next/link';
 import DeleteItem from './DeleteItem';
 import styled from 'styled-components';
 import FormatMoney from '../lib/formatMoney';
+//350
 const Inner = styled.div`
-	max-width: 350px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 2rem;
 	border: 1px solid lightgray;
 	box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
 	display: flex;
 	flex-direction: column;
+	grid-row: 3;
+	@media (max-width: 500px) {
+		margin: 10px 0;
+	}
 `;
 const Actions = styled.div`
 	display: grid;
