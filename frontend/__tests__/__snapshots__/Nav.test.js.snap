@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> renders a minimal nav when no user is signed in 1`] = `
+<ul
+  className="NavStyles-x3z0n-0 gyNVsA"
+  data-test="nav"
+>
+  <Link
+    href="/shop"
+  >
+    <a
+      href="/shop"
+      onClick={[Function]}
+    >
+      Shop
+    </a>
+  </Link>
+</ul>
+`;
+
+exports[`<Header/> renders the amount of items in the cart 1`] = `null`;
