@@ -57,7 +57,7 @@ class SingleItem extends Component {
 							<img src={item.largeImage} alt={item.title} />
 							<div className="details">
 								<h2>Viewing {item.title}</h2>
-								<p>{item.description}</p>
+								<p data-test="graphql-error">{item.description}</p>
 								<Link
 									href={{
 										pathname: 'update',
