@@ -24,35 +24,32 @@ const Pagination = props => (
 			const pages = Math.ceil(count / perPage);
 			const page = props.page;
 			return (
-				<PaginationStyles data-test="pagination">
+				<PaginationStyles>
 					<Head>
 						<title>
-							Checo — Page {page} of {pages}
+							Michael Checo — Page {page} of {pages}
 						</title>
 					</Head>
 					<Link
 						prefetch
 						href={{
-							pathname: 'items',
+							pathname: 'shop',
 							query: { page: page - 1 },
-						}}
-					>
+						}}>
 						<a className="prev" aria-disabled={page <= 1}>
 							← Prev
 						</a>
 					</Link>
 					<p>
-						Page {props.page} of
-						<span className="totalPages">{pages}</span>!
+						Page {props.page} of {pages}
 					</p>
-					<p>{count} Items Total</p>
+					{/* <p>{count} Items Total</p> */}
 					<Link
 						prefetch
 						href={{
-							pathname: 'items',
+							pathname: 'shop',
 							query: { page: page + 1 },
-						}}
-					>
+						}}>
 						<a className="next" aria-disabled={page >= pages}>
 							Next →
 						</a>
