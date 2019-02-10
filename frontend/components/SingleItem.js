@@ -52,7 +52,7 @@ class SingleItem extends Component {
 					return (
 						<SingleItemStyles>
 							<Head>
-								<title>Checo | {item.title}</title>
+								<title>Checo's Cafe | {item.title}</title>
 							</Head>
 							<img src={item.largeImage} alt={item.title} />
 							<div className="details">

@@ -27,7 +27,7 @@ const Pagination = props => (
 				<PaginationStyles>
 					<Head>
 						<title>
-							Michael Checo — Page {page} of {pages}
+							Checo's Cafe — Page {page} of {pages}
 						</title>
 					</Head>
 					<Link
