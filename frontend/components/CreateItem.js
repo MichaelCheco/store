@@ -26,7 +26,7 @@ const CREATE_ITEM_MUTATION = gql`
 	}
 `;
 
-class createItem extends Component {
+class CreateItem extends Component {
 	state = {
 		title: '',
 		description: '',
@@ -52,7 +52,6 @@ class createItem extends Component {
 			}
 		);
 		const file = await res.json();
-		console.log(file, 'FILE');
 		this.setState({
 			image: file.secure_url,
 			largeImage: file.eager[0].secure_url,
@@ -63,9 +62,9 @@ class createItem extends Component {
 			<Mutation mutation={CREATE_ITEM_MUTATION} variables={this.state}>
 				{(createItem, { loading, error }) => (
 					<Form
+						data-test="form"
 						onSubmit={async e => {
 							e.preventDefault();
-
 							const res = await createItem();
 							console.log(res);
 							Router.push({
@@ -138,5 +137,5 @@ class createItem extends Component {
 	}
 }
 
-export default createItem;
+export default CreateItem;
 export { CREATE_ITEM_MUTATION };
