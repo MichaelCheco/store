@@ -118,8 +118,7 @@ class Items extends Component {
 					// fetchPolicy="network-only"
 					variables={{
 						skip: this.props.page * perPage - perPage,
-					}}
-				>
+					}}>
 					{({ data, error, loading }) => {
 						if (loading) return <p>Loading...</p>;
 						if (error) return <p>Error: {error.message}</p>;

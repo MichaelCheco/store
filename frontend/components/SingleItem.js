@@ -3,8 +3,9 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Error from './ErrorMessage';
 import styled from 'styled-components';
+import Link from 'next/link';
 import Head from 'next/head';
-
+import DeleteItem from './DeleteItem';
 const SingleItemStyles = styled.div`
 	max-width: 1200px;
 	margin: 2rem auto;
@@ -20,6 +21,7 @@ const SingleItemStyles = styled.div`
 	}
 	.details {
 		margin: 3rem;
+		margin-top: 13rem;
 		font-size: 2rem;
 	}
 `;
@@ -41,8 +43,7 @@ class SingleItem extends Component {
 				query={SINGLE_ITEM_QUERY}
 				variables={{
 					id: this.props.id,
-				}}
-			>
+				}}>
 				{({ error, loading, data }) => {
 					if (error) return <Error error={error} />;
 					if (loading) return <p>Loading...</p>;
@@ -57,6 +58,14 @@ class SingleItem extends Component {
 							<div className="details">
 								<h2>Viewing {item.title}</h2>
 								<p>{item.description}</p>
+								<Link
+									href={{
+										pathname: 'update',
+										query: { id: item.id },
+									}}>
+									<Button>Edit ✏️</Button>
+								</Link>
+								<DeleteItem id={item.id}>Delete This Item</DeleteItem>
 							</div>
 						</SingleItemStyles>
 					);
@@ -65,6 +74,13 @@ class SingleItem extends Component {
 		);
 	}
 }
-
+const Button = styled.div`
+	border: 1px solid lightgray;
+	padding: 10px;
+	text-align: center;
+	display: inline;
+	margin-right: 5px;
+	border-radius: 4px;
+`;
 export default SingleItem;
 export { SINGLE_ITEM_QUERY };

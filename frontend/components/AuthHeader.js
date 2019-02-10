@@ -15,7 +15,8 @@ const Name = styled.div`
 		align-self: center;
 		width: 33%;
 		white-space: nowrap;
-		margin-right: 18px;
+		margin-right: 2rem;
+		font-size: 1.5rem;
 	}
 `;
 // 50px
@@ -79,7 +80,7 @@ const AuthHeader = props => (
 					</Yerr>
 				) : (
 					<Wrapper>
-						<Link href="/signup">
+						<Link href="/login">
 							<a>LOG IN</a>
 						</Link>
 						<Link href="/signup">

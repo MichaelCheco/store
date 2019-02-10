@@ -24,25 +24,16 @@ export default class Item extends Component {
 						href={{
 							pathname: '/item',
 							query: { id: item.id },
-						}}
-					>
+						}}>
 						<a>{item.title}</a>
 					</Link>
 				</Title>
-				<PriceTag>{formatMoney(item.price)}</PriceTag>
 				<p>{item.description}</p>
 
 				<div className="buttonList">
-					<Link
-						href={{
-							pathname: 'update',
-							query: { id: item.id },
-						}}
-					>
-						<a>Edit ✏️</a>
-					</Link>
+					<div>{formatMoney(item.price)}</div>
+
 					<AddToCart id={item.id} />
-					<DeleteItem id={item.id}>Delete This Item</DeleteItem>
 				</div>
 			</ItemStyles>
 		);

@@ -7,6 +7,10 @@ const Button = styled.div`
 	border: 1px solid lightgray;
 	padding: 10px;
 	text-align: center;
+	cursor: pointer;
+	&:active {
+		color: burlywood;
+	}
 `;
 const ADD_TO_CART_MUTATION = gql`
 	mutation addToCart($id: ID!) {
@@ -25,8 +29,7 @@ class AddToCart extends Component {
 				variables={{
 					id,
 				}}
-				refetchQueries={[{ query: CURRENT_USER_QUERY }]}
-			>
+				refetchQueries={[{ query: CURRENT_USER_QUERY }]}>
 				{(AddToCart, { loading }) => (
 					<Button disabled={loading} onClick={AddToCart}>
 						Add{loading && 'ing'} To Cart 🛒

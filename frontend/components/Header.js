@@ -12,7 +12,10 @@ import styled from 'styled-components';
 const Blah = styled.div`
 	align-self: center;
 	@media (max-width: 500px) {
-		display: none;
+		/* display: none; */
+		margin: 15px 0;
+
+		align-self: flex-start;
 	}
 `;
 const Header = () => (
@@ -30,9 +33,9 @@ const Header = () => (
 						<Link href="/orders">
 							<a>Orders</a>
 						</Link>
-						<Link href="/me">
+						{/* <Link href="/me">
 							<a>Account</a>
-						</Link>
+						</Link> */}
 						<Blah>
 							<Signout />
 						</Blah>
@@ -41,7 +44,10 @@ const Header = () => (
 								<button onClick={toggleCart}>
 									My Cart
 									<CartCount
-										count={me.cart.reduce((tally, cartItem) => tally + cartItem.quantity, 0)}
+										count={me.cart.reduce(
+											(tally, cartItem) => tally + cartItem.quantity,
+											0
+										)}
 									/>
 								</button>
 							)}
@@ -49,11 +55,11 @@ const Header = () => (
 						<Cart />
 					</>
 				)}
-				{!me && (
+				{/* {!me && (
 					<Link href="/signup">
 						<a>Sign In</a>
 					</Link>
-				)}
+				)} */}
 			</NavStyles>
 		)}
 	</User>
