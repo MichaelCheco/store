@@ -6,6 +6,8 @@ const Img = styled.img`
 	object-fit: cover;
 	height: 750px;
 	opacity: 1;
+	@media (max-width: 500px) {
+	}
 `;
 const easeInRight = keyframes`
         from {
@@ -14,7 +16,7 @@ const easeInRight = keyframes`
     
         }
         to {
-            margin-right: -260px;
+            margin-right: -16%;
             opacity: 1;
         }
 `;
@@ -22,25 +24,26 @@ const H2Right = styled.h2`
 	animation: 1.5s ${easeInRight} linear;
 	animation-fill-mode: forwards;
 	height: 45px;
-	font-size: 34px;
+	font-size: 3.4rem;
 	color: black;
 	position: absolute;
-	top: 19px;
-	right: 370px;
-	/* font-family: "Thasadith", sans-serif; */
-	white-space: nowrap;
+	top: 3%;
+	right: 22%;
+	@media (max-width: 500px) {
+		display: none;
+	}
 `;
 const Wrapper = styled.div`
 	border: 2px solid gray;
 	position: absolute;
 	background: whitesmoke;
-	top: 240px;
-	left: 400px;
+	top: 28%;
+	left: 25%;
 	width: 55%;
 	opacity: 0.8;
 	height: 400px;
 	transform: skew(-4deg);
-	padding: 15px;
+	padding: 1%;
 	z-index: 2;
 	h1 {
 		text-align: center;
@@ -50,6 +53,19 @@ const Wrapper = styled.div`
 		font-weight: 600;
 		line-height: 2;
 		font-size: 2rem;
+	}
+	@media (max-width: 500px) {
+		width: 80%;
+		height: 350px;
+		top: 45%;
+		left: 9%;
+		transform: none;
+		h1 {
+			font-size: 2.5rem;
+		}
+		p {
+			font-size: 1.6rem;
+		}
 	}
 `;
 const Image = () => (
