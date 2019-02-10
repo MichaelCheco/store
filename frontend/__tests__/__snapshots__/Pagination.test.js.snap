@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination/> renders pagination for 12 times 1`] = `
+<div
+  className="PaginationStyles-rkhbcq-0 bwjLWj"
+  data-test="pagination"
+>
+  <SideEffect(Head)>
+    <Head />
+  </SideEffect(Head)>
+  <Link
+    href={
+      Object {
+        "pathname": "shop",
+        "query": Object {
+          "page": 0,
+        },
+      }
+    }
+    prefetch={true}
+  >
+    <a
+      aria-disabled={true}
+      className="prev"
+      href="shop?page=0"
+      onClick={[Function]}
+    >
+      ← Prev
+    </a>
+  </Link>
+  <p>
+    Page 
+    1
+     of 
+    <span
+      className="totalPages"
+    >
+      2
+    </span>
+  </p>
+  <Link
+    href={
+      Object {
+        "pathname": "shop",
+        "query": Object {
+          "page": 2,
+        },
+      }
+    }
+    prefetch={true}
+  >
+    <a
+      aria-disabled={false}
+      className="next"
+      href="shop?page=2"
+      onClick={[Function]}
+    >
+      Next →
+    </a>
+  </Link>
+</div>
+`;

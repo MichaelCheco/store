@@ -24,7 +24,7 @@ const Pagination = props => (
 			const pages = Math.ceil(count / perPage);
 			const page = props.page;
 			return (
-				<PaginationStyles>
+				<PaginationStyles data-test="pagination">
 					<Head>
 						<title>
 							Checo's Cafe — Page {page} of {pages}
@@ -41,7 +41,7 @@ const Pagination = props => (
 						</a>
 					</Link>
 					<p>
-						Page {props.page} of {pages}
+						Page {props.page} of <span className="totalPages">{pages}</span>
 					</p>
 					{/* <p>{count} Items Total</p> */}
 					<Link
