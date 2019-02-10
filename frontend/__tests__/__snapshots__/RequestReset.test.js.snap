@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RequestReset/> renders and matches snapshot 1`] = `
+<form
+  data-test="form"
+  method="post"
+  onSubmit={[Function]}
+>
+  <RequestReset__Fieldset
+    aria-busy={false}
+    disabled={false}
+  >
+    <StyledComponent
+      aria-busy={false}
+      disabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "RequestReset__Fieldset-sc-1w64nx4-0",
+            "isStatic": true,
+            "lastClassName": "dRkCbe",
+            "rules": Array [
+              "display:flex;flex-direction:column;border:1px solid lightgray;width:800px;margin:0 auto;height:500px;h2{margin-left:1rem;}label{padding:0.4rem;font-size:3rem;margin:0.3rem;input{height:30px;width:100%;font-size:1.6rem;outline:0;}}button{width:155px;height:50px;border-radius:5px;font-size:1.8rem;margin:0.5rem;cursor:pointer;padding:5px;color:white;background:black;margin-left:1rem;}",
+            ],
+          },
+          "displayName": "RequestReset__Fieldset",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "RequestReset__Fieldset-sc-1w64nx4-0",
+          "target": "fieldset",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <fieldset
+        aria-busy={false}
+        className="RequestReset__Fieldset-sc-1w64nx4-0 dRkCbe"
+        disabled={false}
+      >
+        <h2>
+          Request a password reset
+        </h2>
+        <DisplayError
+          error={Object {}}
+        />
+        <label
+          htmlFor="email"
+        >
+          Email
+          <input
+            name="email"
+            onChange={[Function]}
+            type="email"
+            value=""
+          />
+        </label>
+        <button
+          type="submit"
+        >
+          Request Reset!
+        </button>
+      </fieldset>
+    </StyledComponent>
+  </RequestReset__Fieldset>
+</form>
+`;
