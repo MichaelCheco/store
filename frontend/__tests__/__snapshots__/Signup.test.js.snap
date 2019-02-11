@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Signup/> renders and matches snapshot 1`] = `
+<form
+  method="post"
+  onSubmit={[Function]}
+>
+  <Signup__Fieldset
+    aria-busy={false}
+    disabled={false}
+  >
+    <StyledComponent
+      aria-busy={false}
+      disabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "Signup__Fieldset-sc-5vkt6r-0",
+            "isStatic": true,
+            "lastClassName": "kzfeag",
+            "rules": Array [
+              "display:flex;flex-direction:column;border:1px solid lightgray;width:800px;margin:0 auto;height:500px;label{padding:0.4rem;font-size:3rem;margin:0.3rem;input{height:30px;width:100%;font-size:1.6rem;outline:0;}}button{width:105px;height:40px;border-radius:5px;font-size:2rem;cursor:pointer;padding:5px;color:white;background:black;margin-left:1rem;}",
+            ],
+          },
+          "displayName": "Signup__Fieldset",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "Signup__Fieldset-sc-5vkt6r-0",
+          "target": "fieldset",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <fieldset
+        aria-busy={false}
+        className="Signup__Fieldset-sc-5vkt6r-0 kzfeag"
+        disabled={false}
+      >
+        <DisplayError
+          error={Object {}}
+        />
+        <label
+          htmlFor="name"
+        >
+          Name
+          <input
+            id="name"
+            name="name"
+            onChange={[Function]}
+            placeholder="name"
+            required={true}
+            type="text"
+            value=""
+          />
+        </label>
+        <label
+          htmlFor="email"
+        >
+          Email
+          <input
+            id="email"
+            name="email"
+            onChange={[Function]}
+            placeholder="email"
+            required={true}
+            type="email"
+            value=""
+          />
+        </label>
+        <label
+          htmlFor="password"
+        >
+          Password
+          <input
+            id="password"
+            name="password"
+            onChange={[Function]}
+            placeholder="password"
+            required={true}
+            type="password"
+            value=""
+          />
+        </label>
+        <button
+          type="submit"
+        >
+          Register!
+        </button>
+      </fieldset>
+    </StyledComponent>
+  </Signup__Fieldset>
+</form>
+`;
