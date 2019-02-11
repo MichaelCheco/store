@@ -9,30 +9,7 @@ const Img = styled.img`
 	@media (max-width: 500px) {
 	}
 `;
-const easeInRight = keyframes`
-        from {
-            margin-right: 0px;
-            opacity: 0;
-    
-        }
-        to {
-            margin-right: -16%;
-            opacity: 1;
-        }
-`;
-const H2Right = styled.h2`
-	animation: 1.5s ${easeInRight} linear;
-	animation-fill-mode: forwards;
-	height: 45px;
-	font-size: 3.4rem;
-	color: black;
-	position: absolute;
-	top: 3%;
-	right: 22%;
-	@media (max-width: 500px) {
-		display: none;
-	}
-`;
+
 const Wrapper = styled.div`
 	border: 2px solid gray;
 	position: absolute;
@@ -41,7 +18,7 @@ const Wrapper = styled.div`
 	left: 25%;
 	width: 55%;
 	opacity: 0.8;
-	height: 400px;
+	height: auto;
 	transform: skew(-4deg);
 	padding: 1%;
 	z-index: 2;
@@ -80,7 +57,6 @@ const Image = () => (
 			</p>
 		</Wrapper>
 		<Img src="static/ad.jpg" />
-		<H2Right>Checo's Coffee</H2Right>{' '}
 	</>
 );
 
