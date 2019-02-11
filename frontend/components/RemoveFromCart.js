@@ -42,16 +42,14 @@ class RemoveFromCart extends Component {
 						__typename: 'cartItem',
 						id: this.props.id,
 					},
-				}}
-			>
+				}}>
 				{(removeFromCart, { loading, error }) => (
 					<BigButton
 						disabled={loading}
 						onClick={() => {
 							removeFromCart().catch(err => alert(err.message));
 						}}
-						title="Delete Item"
-					>
+						title="Delete Item">
 						&times;
 					</BigButton>
 				)}
@@ -61,3 +59,4 @@ class RemoveFromCart extends Component {
 }
 
 export default RemoveFromCart;
+export { REMOVE_FROM_CART_MUTATION };
