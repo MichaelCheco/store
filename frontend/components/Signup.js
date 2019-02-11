@@ -33,6 +33,10 @@ const Fieldset = styled.fieldset`
 		background: black;
 		margin-left: 1rem;
 	}
+	@media (max-width: 500px) {
+		width: 400px;
+		padding: 0.2rem;
+	}
 `;
 const SIGNUP_MUTATION = gql`
 	mutation SIGNUP_MUTATION(

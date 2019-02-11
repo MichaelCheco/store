@@ -1,6 +1,5 @@
 import Signup from '../components/Signup';
-// import Signin from '../components/Signin';
-// import RequestReset from '../components/RequestReset';
+
 import styled from 'styled-components';
 const Div = styled.div`
 	border: 1px solid lightgray;
@@ -10,8 +9,6 @@ const Div = styled.div`
 const SignUp = props => (
 	<Div>
 		<Signup />
-		{/* <RequestReset />
-		<Signin /> */}
 	</Div>
 );
 

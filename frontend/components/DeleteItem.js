@@ -10,6 +10,7 @@ const Button = styled.div`
 	display: inline;
 	margin-left: 5px;
 	border-radius: 4px;
+	cursor: pointer;
 `;
 const DELETE_ITEM_MUTATION = gql`
 	mutation DELETE_ITEM_MUTATION($id: ID!) {

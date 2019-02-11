@@ -40,6 +40,10 @@ const Fieldset = styled.fieldset`
 		background: black;
 		margin-left: 1rem;
 	}
+	@media (max-width: 500px) {
+		width: 400px;
+		padding: 0.2rem;
+	}
 `;
 const SIGNIN_MUTATION = gql`
 	mutation SIGNIN_MUTATION($password: String!, $email: String!) {

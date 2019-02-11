@@ -25,6 +25,15 @@ const SingleItemStyles = styled.div`
 		font-size: 2rem;
 	}
 `;
+const Button = styled.div`
+	border: 1px solid lightgray;
+	padding: 10px;
+	text-align: center;
+	display: inline;
+	margin-right: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+`;
 
 const SINGLE_ITEM_QUERY = gql`
 	query SINGLE_ITEM_QUERY($id: ID!) {
@@ -74,13 +83,5 @@ class SingleItem extends Component {
 		);
 	}
 }
-const Button = styled.div`
-	border: 1px solid lightgray;
-	padding: 10px;
-	text-align: center;
-	display: inline;
-	margin-right: 5px;
-	border-radius: 4px;
-`;
 export default SingleItem;
 export { SINGLE_ITEM_QUERY };

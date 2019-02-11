@@ -58,8 +58,16 @@ const Wrapper = styled.div`
 			text-decoration: underline;
 		}
 	}
+	@media (max-width: 500px) {
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		a {
+			margin: 5px;
+		}
+	}
 `;
-const Yerr = styled.div`
+const LoggedInStyles = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -69,7 +77,7 @@ const AuthHeader = props => (
 		<User>
 			{({ data: { me } }) =>
 				me ? (
-					<Yerr>
+					<LoggedInStyles>
 						<Search />
 						<Name>WELCOME {me.name.toUpperCase()}</Name>
 						<Signout>
@@ -77,7 +85,7 @@ const AuthHeader = props => (
 								<a>SIGN OUT</a>
 							</Link>
 						</Signout>
-					</Yerr>
+					</LoggedInStyles>
 				) : (
 					<Wrapper>
 						<Link href="/login">
