@@ -77,5 +77,3 @@ class TakeMyMoney extends React.Component {
 
 export default TakeMyMoney;
 export { CREATE_ORDER_MUTATION };
-
-// pk_test_eeSq6Wjt98teirL3HKvQ3wTK
