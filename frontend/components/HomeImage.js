@@ -31,10 +31,57 @@ const Wrapper = styled.div`
 		line-height: 2;
 		font-size: 2rem;
 	}
+	@media (max-width: 1200px) {
+		h1 {
+			font-size: 4.3rem;
+		}
+	}
+	@media (max-width: 1100px) {
+		h1 {
+			font-size: 4.1rem;
+		}
+	}
+	@media (max-width: 1000px) {
+		h1 {
+			font-size: 4rem;
+		}
+	}
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 3.7rem;
+		}
+	}
+	@media (max-width: 850px) {
+		h1 {
+			font-size: 3.5rem;
+		}
+	}
+
+	@media (max-width: 800px) {
+		p {
+			font-size: 1.8rem;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	@media (max-width: 680px) {
+		h1 {
+			font-size: 2.7rem;
+		}
+	}
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 2.2rem;
+		}
+		p {
+			font-size: 1.7rem;
+		}
+	}
 	@media (max-width: 500px) {
 		width: 80%;
 		height: 350px;
-		top: 45%;
+		top: 88%;
 		left: 9%;
 		transform: none;
 		h1 {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 const AnimationStyles = styled.span`
 	position: relative;
 	.count {
@@ -40,6 +40,10 @@ const Dot = styled.div`
 	font-weight: 100;
 	font-feature-settings: 'tnum';
 	font-variant-numeric: tabular-nums;
+	margin-top: 10px;
+	@media (max-width: 500px) {
+		width: 36px;
+	}
 `;
 
 const CartCount = ({ count }) => (
@@ -50,8 +54,7 @@ const CartCount = ({ count }) => (
 				className="count"
 				classNames="count"
 				key={count}
-				timeout={{ enter: 400, exit: 400 }}
-			>
+				timeout={{ enter: 400, exit: 400 }}>
 				<Dot>{count}</Dot>
 			</CSSTransition>
 		</TransitionGroup>

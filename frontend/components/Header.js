@@ -18,6 +18,7 @@ const Blah = styled.div`
 		align-self: flex-start;
 	}
 `;
+
 const Header = () => (
 	<User>
 		{({ data: { me } }) => (
@@ -33,33 +34,31 @@ const Header = () => (
 						<Link href="/orders">
 							<a>Orders</a>
 						</Link>
-						{/* <Link href="/me">
-							<a>Account</a>
-						</Link> */}
-						<Blah>
-							<Signout />
-						</Blah>
+						<Signout />
+						<Cart />
 						<Mutation mutation={TOGGLE_CART_MUTATION}>
 							{toggleCart => (
-								<button onClick={toggleCart}>
-									My Cart
+								<>
+									<Link>
+										<a onClick={toggleCart}>Cart</a>
+									</Link>
+
 									<CartCount
 										count={me.cart.reduce(
 											(tally, cartItem) => tally + cartItem.quantity,
 											0
 										)}
 									/>
-								</button>
+								</>
 							)}
 						</Mutation>
-						<Cart />
 					</>
 				)}
-				{/* {!me && (
+				{!me && (
 					<Link href="/signup">
-						<a>Sign In</a>
+						<a />
 					</Link>
-				)} */}
+				)}
 			</NavStyles>
 		)}
 	</User>

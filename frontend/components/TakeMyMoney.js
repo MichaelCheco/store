@@ -47,7 +47,8 @@ class TakeMyMoney extends React.Component {
 		return (
 			<User>
 				{({ data: { me }, loading }) => {
-					if (loading) return null;
+					if (loading) return <p>Loading</p>;
+					if (!me) return <p>No user</p>;
 					return (
 						<Mutation
 							mutation={CREATE_ORDER_MUTATION}
